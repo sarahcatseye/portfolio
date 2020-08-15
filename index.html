@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sarah Tsai - Home</title>
+    <link rel="icon" type="image/ico" href="img/logo.png" />
+  </head>
+  <body onload = "start()">
+    <div class="topnav" id = "myTopnav">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        menu
+        <i class="fa fa-caret-down"></i>
+      </a>
+      <a class = "active" href="index">sarah tsai</a>
+      <a href="about">about</a>
+      <a href="art">art</a>
+      <a href="games">games</a>
+      <a href="https://www.inprnt.com/gallery/sarahcatseye/">shop</a>
+    </div>
+    <script src = "dropdown.js">
+    </script>
+    <div class="profile-box">
+      <img src = "img/logo.png" height = "200" width = "200" >
+      <h1>sarah tsai*</h1>
+      <p>pixel artist + programmer</p>
+      <p id ="desc">*not a top chef canada contestant</p>
+    </div>
+    <script>
+      Array.prototype.pick = function() {
+        return this[Math.floor(Math.random()*this.length)];
+      }
+      var pre = [
+      "not a top chef canada contestant",
+      "elementary and middle school spelling bee winner",
+      "last place in the basketball league",
+      "sometimes",
+      "sunfish fan",
+      "friend favorite",
+      "/sɛɹə tsai/",
+      "site master",
+      "friendly, i promise :)"
+      ];
+      var preText = pre.pick();
+      console.log(preText);
+      document.getElementById("desc").innerHTML = "*" + preText;
+    </script>
+    <canvas id="myCanvas" onmousemove="mousemove(event)" onmousedown = "mousedown(event)" onmouseup = "mouseup(event)">
+    </canvas>
+    <script src = "graphing.js"></script>
+  </body>
+</html>
